@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Биография — Ravenstvenniy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: linear-gradient(-45deg, #1a002a, #3a0066, #6a00ff, #2a0033);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 900px;
+      height: 320px;
+      position: relative;
+      align-items: center;
+      gap: 40px; /* Добавлен отступ между колонками */
+    }
+
+    /* Вертикальная линия по центру, сдвинута вправо на половину gap */
+    .divider {
+      position: absolute;
+      left: calc(50% + 20px);
+      top: 10%;
+      bottom: 10%;
+      width: 3px;
+      background: linear-gradient(180deg, #c77dff, #9f5cff);
+      border-radius: 2px;
+      box-shadow: 0 0 10px #c77dffaa;
+      z-index: 1;
+    }
+
+    /* Левая часть — бокс с фото и заголовком */
+    .left {
+      width: calc(50% - 20px); /* учёт gap */
+      background-color: rgba(40, 0, 70, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #c77dffcc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .photo-box {
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px #c77dffaa;
+      margin-bottom: 20px;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .title {
+      font-size: 2.0rem;
+      background: linear-gradient(90deg, #c77dff, #9f5cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      user-select: none;
+      text-align: center;
+    }
+
+    /* Правая часть — текст с отступом слева и ограничением ширины */
+    .right {
+      width: calc(50% - 20px); /* учёт gap */
+      padding-left: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      z-index: 2;
+      overflow-wrap: break-word;
+    }
+
+    .right p {
+      margin-bottom: 15px;
+    }
+
+    strong {
+      color: #ffccff;
+    }
+
+    a {
+      color: #ddaaff;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+.dimmed-text {
+  color: rgba(255, 255, 255, 0.4); /* светло-серый, прозрачный */
+  user-select: none;               /* чтобы текст не выделялся */
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+
+    /* Мобильная адаптация */
+    @media (max-width: 720px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        flex-direction: column;
+        height: auto;
+        gap: 0;
+      }
+      .divider {
+        display: none;
+      }
+      .left, .right {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .right {
+        padding-left: 0;
+      }
+    }
+.right {
+  position: relative; /* чтобы абсолютное позиционирование внутри работало */
+  width: calc(50% - 20px);
+  padding-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  z-index: 2;
+  overflow-wrap: break-word;
+  padding-bottom: 40px; /* чтобы место для номера внизу было */
+}
+
+.dimmed-text {
+  position: absolute;
+  bottom: 10px;  /* отступ снизу */
+  right: 20px;   /* отступ справа, совпадает с padding-left у .right */
+  color: rgba(255, 255, 255, 0.4);
+  user-select: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="divider"></div>
+
+    <div class="left">
+      <div class="photo-box">
+        <img src="123.jpg" alt="Фото Ravenstvenniy" />
+      </div>
+      <div class="title">Ravenstvenniy</div>
+    </div>
+
+    <div class="right">
+      <p><strong>Телефон:</strong> +880 19 702 96599</p>
+      <p><strong>Координаты:</strong> 51°09′20″ с. ш., 54°59′35″ в. д.</p>
+      <p><strong>Адрес:</strong> ул. Советская, 6, Соль-Илецк, Оренбургская обл., 461505</p>
+      <p><strong>Telegram:</strong> <a href="https://t.me/Ravenstvenniy" target="_blank">@Ravenstvenniy</a></p>
+
+      <p><strong>Предупреждение:</strong> Этот пользователь является крайне опасным. Мы настоятельно не рекомендуем вступать с ним в контакт. Любое взаимодействие осуществляется на ваш страх и риск.</p>
+
+      <p class="dimmed-text">#6</p>
+    </div>
+  </div>
+</body>
+</html>
